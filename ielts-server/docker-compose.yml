@@ -1,0 +1,13 @@
+name: infrastructure
+services:
+  postgres:
+    image: "postgres:15.2"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=Postgres123
+    volumes:
+      - postgresql_data:/var/lib/postgresql/data
+
+volumes:
+  postgresql_data:
